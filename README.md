@@ -1,4 +1,4 @@
-linux_base
+ImageMagick
 ========
 
 Install Imagemacgick and its dependencies.  Also, updates apt cache
