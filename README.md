@@ -1,7 +1,7 @@
 # ImageMagick
 
 [![Build Status](http://img.shields.io/travis/crushlovely/ansible-imagemagick.svg?style=flat)](https://travis-ci.org/crushlovely/ansible-imagemagick)
-[![Current Version](http://img.shields.io/badge/version-1.0-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1180)
+[![Current Version](http://img.shields.io/github/release/crushlovely/ansible-imagemagick.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1180)
 
 This Ansible role is used to install the ImageMagick apt package and its dependencies on a server running Ubuntu 12.04LTS.
 
