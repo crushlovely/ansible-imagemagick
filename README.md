@@ -1,9 +1,9 @@
 ImageMagick
 ========
 
-Install Imagemacgick and its dependencies.  Also, updates apt cache
+Install ImageMagick and its dependencies.  Also, updates apt cache.
 
-This role is used to install the imagemagick package and its dependencies on a server running Ubuntu 12.04LTS.
+This role is used to install the ImageMagick package and its dependencies on a server running Ubuntu 12.04LTS.
 
 ```
 - name: Imagemagick | Update apt
