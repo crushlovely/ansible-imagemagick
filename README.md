@@ -1,36 +1,29 @@
 ImageMagick
 ========
 
-Install ImageMagick and its dependencies.  Also, updates apt cache.
+This Ansible role is used to install the ImageMagick apt package and its dependencies on a server running Ubuntu 12.04LTS.
 
-This role is used to install the ImageMagick package and its dependencies on a server running Ubuntu 12.04LTS.
+## Installation
 
-```
-- name: Imagemagick | Update apt
-  apt: update_cache=yes
-  sudo: yes
-
-- name: Imagemagick | Install Imagemagick
-  action: apt pkg={{ item }} state=latest
-  sudo: yes
-  with_items:
-    - imagemagick
-    - libmagickcore-dev
-    - libmagickwand-dev
+``` bash
+$ ansible-galaxy install crushlovely.imagemagick
 ```
 
-Requirements
------------
-Operating system developed for: Linux (Ubuntu 12.04LTS 64 bit)
+## Usage
 
-Role Variables
------------
-No Variables for this playbook
+Once this role is installed on your system, include it in the roles list of your playbook.
 
-Dependencies
------------
+``` yaml
+---
+- hosts: localhost
+  roles:
+    - { role: crushlovely.imagemagick }
+```
+
+## Dependencies
+
 None
 
-License
------------
+## License
+
 MIT
