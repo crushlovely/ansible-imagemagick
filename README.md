@@ -33,4 +33,4 @@ None
 
 License
 -----------
-GPL v3
+MIT
