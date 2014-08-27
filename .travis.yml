@@ -11,10 +11,10 @@ install:
   - pip install ansible==1.6.6
   - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
 script:
-  - ansible-playbook --syntax-check -i tests/inventory test.yml
-  - ansible-playbook -i tests/inventory test.yml --connection=local --sudo
+  - ansible-playbook --syntax-check -i tests/inventory tests/test.yml
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
   - >
-    ansible-playbook -i tests/inventory test.yml --connection=local --sudo
+    ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
