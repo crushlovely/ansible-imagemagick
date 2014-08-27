@@ -1,7 +1,13 @@
 ---
+- name: ImageMagick | Check if ImageMagick is installed
+  shell: /usr/bin/test `identify -version | grep "Version" --count` = 1 && echo True
+  register: result
+  ignore_errors: yes
+
 - name: Imagemagick | Update apt
   apt: update_cache=yes
   sudo: yes
+  when: result|failed
 
 - name: Imagemagick | Install Imagemagick
   action: apt pkg={{ item }} state=latest
@@ -10,3 +16,4 @@
     - imagemagick
     - libmagickcore-dev
     - libmagickwand-dev
+  when: result|failed
