@@ -7,5 +7,5 @@
 
 @test "Check that Imagemagick was installed" {
     result="$(identify -version | grep "Version" --count)"
-    [ "$result" -eq 1 ]
+    [ "$result" -eq 0 ]
 }
